@@ -8,7 +8,6 @@ router = APIRouter(prefix="/api/v1/ml", tags=["ml"])
 @router.post(
     "/",
     response_model=MlResponse,
-    description="получение всех company",
 )
 async def post(req: MlRequest):
     if req.description == "":
@@ -33,9 +32,8 @@ async def post(req: MlRequest):
 @router.get(
     "/",
     response_model=MlResponse,
-    description="получение всех company",
 )
-async def post(desc: str):
+async def get(desc: str):
     if desc == "":
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="There is not description")
 
