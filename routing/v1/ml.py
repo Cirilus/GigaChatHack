@@ -1,4 +1,3 @@
-import random
 from fastapi import APIRouter, HTTPException, status
 from schemas.ml import MlResponse, MlRequest
 
