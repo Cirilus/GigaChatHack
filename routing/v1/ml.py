@@ -6,7 +6,7 @@ router = APIRouter(prefix="/api/v1/ml", tags=["ml"])
 
 
 @router.post(
-    "/check_url",
+    "/",
     response_model=MlResponse,
     description="получение всех company",
 )
