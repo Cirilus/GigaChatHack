@@ -16,7 +16,8 @@ async def post(req: MlRequest):
 
     res = {}
 
-    chat = GigaChat(credentials="Mzk3MTJlMGEtMTkyZS00YWE0LWJmMGEtMzRlNzE1ZmIzZGNjOmI1NzA1YmFmLTQyNTctNDdjMy1hNzdkLWI0ZTQyZTM5ZGY4Ng==", verify_ssl_certs=False)
+    chat = GigaChat(credentials="Mzk3MTJlMGEtMTkyZS00YWE0LWJmMGEtMzRlNzE1ZmIzZGNjOmI1NzA1YmFmLTQyNTctNDdjMy1hNzdkLWI0ZTQyZTM5ZGY4Ng==",
+                    verify_ssl_certs=False, temperature=1.0)
 
     prompt = "Ты профессиональный бизнес аналитик и экономист. Распиши бизнес модель по описанию проекта: "
     ans = chat([HumanMessage(content=prompt + req.description)])
